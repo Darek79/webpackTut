@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-        entry: './src/index.js',
+        entry: { app :'./src/index.js'},
         output: {
             filename: 'bundle.[contenthash].js',
             path: path.resolve(__dirname, './dist'),
@@ -57,8 +57,8 @@ module.exports = {
             new CleanWebpackPlugin('dist'),
             new HtmlWebpackPlugin({
                 title: 'my page',
-                template: 'src/index.hbs',
-                description: 'some desc'
+                description: 'page',
+                template: 'src/module/index.hbs'
                 
             })  
             ]
